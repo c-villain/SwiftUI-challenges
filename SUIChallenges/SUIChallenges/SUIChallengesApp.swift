@@ -15,7 +15,8 @@ struct SUIChallengesApp: App {
             /// Uncomment choosed challenge 👇🏻
 //            Lamp()
 //            Spotify()
-            AirDrop()
+//            AirDrop()
+            Fireworks()
         }
     }
 }
