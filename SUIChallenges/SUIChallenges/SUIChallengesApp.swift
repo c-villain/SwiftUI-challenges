@@ -16,7 +16,8 @@ struct SUIChallengesApp: App {
 //            Lamp()
 //            Spotify()
 //            AirDrop()
-            Fireworks()
+//            Fireworks()
+            FlexCards()
         }
     }
 }
