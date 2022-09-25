@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0E183D28E043BF00BD4CE1 /* 5.FlexCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */; };
 		5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */; };
 		5A72661B28A04EDD0073EBAC /* SUIChallengesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72661A28A04EDD0073EBAC /* SUIChallengesApp.swift */; };
 		5A72661F28A04EDF0073EBAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A72661E28A04EDF0073EBAC /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.FlexCards.swift; sourceTree = "<group>"; };
 		5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.Firework.swift; sourceTree = "<group>"; };
 		5A72661728A04EDD0073EBAC /* SUIChallenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUIChallenges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A72661A28A04EDD0073EBAC /* SUIChallengesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUIChallengesApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				5A72662B28A04FA00073EBAC /* 2.Spotify.swift */,
 				5A72662D28A04FC60073EBAC /* 3.AirDrop.swift */,
 				5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */,
+				5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */,
 			);
 			path = SUIChallenges;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				5A72662E28A04FC60073EBAC /* 3.AirDrop.swift in Sources */,
 				5A72662A28A04F6F0073EBAC /* 1.Lamp.swift in Sources */,
 				5A72661B28A04EDD0073EBAC /* SUIChallengesApp.swift in Sources */,
+				5A0E183D28E043BF00BD4CE1 /* 5.FlexCards.swift in Sources */,
 				5A72662C28A04FA00073EBAC /* 2.Spotify.swift in Sources */,
 				5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */,
 			);
