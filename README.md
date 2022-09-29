@@ -5,3 +5,4 @@
  3. [AirDrop](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/3.AirDrop.swift)
  4. [Fireworks](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/4.Firework.swift)
  5. [Flex cards](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/5.FlexCards.swift)
+ 6. [Hamburgers](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/6.Hamburgers.swift)
