@@ -5,8 +5,6 @@
 //  Created by Alexander Kraev on 25.09.2022.
 //
 
-import Foundation
-
 import SwiftUI
 
 struct Card: Identifiable, Hashable {
