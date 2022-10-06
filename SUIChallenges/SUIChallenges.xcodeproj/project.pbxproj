@@ -10,6 +10,7 @@
 		5A0E183D28E043BF00BD4CE1 /* 5.FlexCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */; };
 		5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */; };
 		5A576EB228E3788600F15B57 /* 6.Hamburgers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A576EB128E3788600F15B57 /* 6.Hamburgers.swift */; };
+		5A62639D28E8D81C00D0B9DF /* 7.WavedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62639C28E8D81C00D0B9DF /* 7.WavedTabView.swift */; };
 		5A72661B28A04EDD0073EBAC /* SUIChallengesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72661A28A04EDD0073EBAC /* SUIChallengesApp.swift */; };
 		5A72661F28A04EDF0073EBAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A72661E28A04EDF0073EBAC /* Assets.xcassets */; };
 		5A72662228A04EDF0073EBAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A72662128A04EDF0073EBAC /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.FlexCards.swift; sourceTree = "<group>"; };
 		5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.Firework.swift; sourceTree = "<group>"; };
 		5A576EB128E3788600F15B57 /* 6.Hamburgers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.Hamburgers.swift; sourceTree = "<group>"; };
+		5A62639C28E8D81C00D0B9DF /* 7.WavedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.WavedTabView.swift; sourceTree = "<group>"; };
 		5A72661728A04EDD0073EBAC /* SUIChallenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUIChallenges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A72661A28A04EDD0073EBAC /* SUIChallengesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUIChallengesApp.swift; sourceTree = "<group>"; };
 		5A72661E28A04EDF0073EBAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */,
 				5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */,
 				5A576EB128E3788600F15B57 /* 6.Hamburgers.swift */,
+				5A62639C28E8D81C00D0B9DF /* 7.WavedTabView.swift */,
 			);
 			path = SUIChallenges;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				5A72662A28A04F6F0073EBAC /* 1.Lamp.swift in Sources */,
 				5A72661B28A04EDD0073EBAC /* SUIChallengesApp.swift in Sources */,
 				5A0E183D28E043BF00BD4CE1 /* 5.FlexCards.swift in Sources */,
+				5A62639D28E8D81C00D0B9DF /* 7.WavedTabView.swift in Sources */,
 				5A72662C28A04FA00073EBAC /* 2.Spotify.swift in Sources */,
 				5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */,
 			);
