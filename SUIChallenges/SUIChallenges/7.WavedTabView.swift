@@ -134,7 +134,7 @@ struct WavedTabView: View {
                     }
                     
                     HStack {
-                        Text("Selected btn offset: \(Int(selectedOffset))")
+                        Text("Selected offset: \(Int(selectedOffset))")
                             .font(.largeTitle)
                         Slider(value: $selectedOffset, in: -40...40)
                             .tint(.yellow)
