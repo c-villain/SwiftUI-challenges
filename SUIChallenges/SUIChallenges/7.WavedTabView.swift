@@ -1,12 +1,11 @@
 //
-//  7.WavedTabView.swift
-//  SUIChallenges
+//  WavedTabView.swift
+//  Waved tab view
 //
 //  Created by Alexander Kraev on 01.10.2022.
 //
 
 import SwiftUI
-import Combine
 
 enum TabType: Int {
     case person = 0
