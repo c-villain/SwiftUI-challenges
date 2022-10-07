@@ -32,6 +32,7 @@ extension UIDevice {
         UIDevice.current.userInterfaceIdiom == .phone
     }
 }
+
 struct WavedTabView: View {
     
     @State var tabs: [Tab] = [.init(id: 1, type: .person, imageName: "person", color: Color.blue.opacity(0.6)),
