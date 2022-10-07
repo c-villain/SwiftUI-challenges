@@ -36,8 +36,8 @@ struct WavedTabView: View {
     
     @State var tabs: [Tab] = [.init(id: 1, type: .person, imageName: "person", color: Color.blue.opacity(0.6)),
                               .init(id: 2, type: .search, imageName: "magnifyingglass", color: Color.orange.opacity(0.6)),
-                              .init(id: 3, type: .chat, imageName: "bubble.left", color: Color.pink.opacity(0.6)),
-                              .init(id: 4, type: .phone, imageName: "phone", color: Color.brown.opacity(0.6)),
+                              .init(id: 3, type: .chat, imageName: "bubble.left", color: Color.brown.opacity(0.6)),
+                              .init(id: 4, type: .phone, imageName: "phone", color: Color.pink.opacity(0.6)),
                               .init(id: 5, type: .settings, imageName: "gear", color: Color.mint.opacity(0.6))]
     
     
@@ -68,11 +68,11 @@ struct WavedTabView: View {
                     .ignoresSafeArea(.all, edges: .all)
                     .tag(TabType.search)
                 
-                Color.pink
+                Color.brown
                     .ignoresSafeArea(.all, edges: .all)
                     .tag(TabType.chat)
                 
-                Color.brown
+                Color.pink
                     .ignoresSafeArea(.all, edges: .all)
                     .tag(TabType.phone)
                 
@@ -86,48 +86,56 @@ struct WavedTabView: View {
                 VStack {
                     HStack {
                         Text("Wave length: \(Int(waveLength))")
+                            .font(.largeTitle)
                         Slider(value: $waveLength, in: 80...(UIDevice.isIPad ? 200 : 140))
                             .tint(.yellow)
                     }
                     
                     HStack {
                         Text("Wave height: \(Int(waveHeight))")
+                            .font(.largeTitle)
                         Slider(value: $waveHeight, in: -50...50)
                             .tint(.yellow)
                     }
                     
                     HStack {
                         Text("Tab bar height: \(Int(tabBarHeight))")
-                        Slider(value: $tabBarHeight, in: 20...90)
+                            .font(.largeTitle)
+                        Slider(value: $tabBarHeight, in: 10...90)
                             .tint(.yellow)
                     }
                     
                     HStack {
-                        Text("Padding inside tab view: \(Int(hPaddingIn))")
+                        Text("Padding inside: \(Int(hPaddingIn))")
+                            .font(.largeTitle)
                         Slider(value: $hPaddingIn, in: 14...(UIDevice.isIPad ? 100 : 35))
                             .tint(.yellow)
                     }
                     
                     HStack {
-                        Text("Padding outside tab view: \(Int(hPaddingOut))")
+                        Text("Padding outside: \(Int(hPaddingOut))")
+                            .font(.largeTitle)
                         Slider(value: $hPaddingOut, in: 0...(UIDevice.isIPad ? 100 : 20))
                             .tint(.yellow)
                     }
                     
                     HStack {
-                        Text("Corner radius for tab view: \(Int(cornerRadius))")
+                        Text("Corner radius: \(Int(cornerRadius))")
+                            .font(.largeTitle)
                         Slider(value: $cornerRadius, in: 0...40)
                             .tint(.yellow)
                     }
                     
                     HStack {
                         Text("Buttons offset: \(Int(offset))")
+                            .font(.largeTitle)
                         Slider(value: $offset, in: -40...40)
                             .tint(.yellow)
                     }
                     
                     HStack {
-                        Text("Selected button offset: \(Int(selectedOffset))")
+                        Text("Selected btn offset: \(Int(selectedOffset))")
+                            .font(.largeTitle)
                         Slider(value: $selectedOffset, in: -40...40)
                             .tint(.yellow)
                     }
@@ -142,7 +150,12 @@ struct WavedTabView: View {
                         offset = 10
                         selectedOffset = -15
                     }
-                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50.0)
+                    .padding(8)
+                    .background(Color.black.opacity(0.8))
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
                 }
                 .padding()
                 .frame(maxHeight: .infinity)
