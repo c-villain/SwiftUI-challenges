@@ -19,7 +19,8 @@ struct SUIChallengesApp: App {
 //            Fireworks()
 //            FlexCards()
 //            Hamburgers()
-            WavedTabView()
+//            WavedTabView()
+            SneakersShop()
         }
     }
 }

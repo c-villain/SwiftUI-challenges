@@ -17,6 +17,7 @@
 		5A72662A28A04F6F0073EBAC /* 1.Lamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72662928A04F6F0073EBAC /* 1.Lamp.swift */; };
 		5A72662C28A04FA00073EBAC /* 2.Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72662B28A04FA00073EBAC /* 2.Spotify.swift */; };
 		5A72662E28A04FC60073EBAC /* 3.AirDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A72662D28A04FC60073EBAC /* 3.AirDrop.swift */; };
+		5ACAD44828F9D49B00DE6156 /* 8.SneakersShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAD44728F9D49B00DE6156 /* 8.SneakersShop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5A72662928A04F6F0073EBAC /* 1.Lamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.Lamp.swift; sourceTree = "<group>"; };
 		5A72662B28A04FA00073EBAC /* 2.Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.Spotify.swift; sourceTree = "<group>"; };
 		5A72662D28A04FC60073EBAC /* 3.AirDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.AirDrop.swift; sourceTree = "<group>"; };
+		5ACAD44728F9D49B00DE6156 /* 8.SneakersShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8.SneakersShop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */,
 				5A576EB128E3788600F15B57 /* 6.Hamburgers.swift */,
 				5A62639C28E8D81C00D0B9DF /* 7.WavedTabView.swift */,
+				5ACAD44728F9D49B00DE6156 /* 8.SneakersShop.swift */,
 			);
 			path = SUIChallenges;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				5A72662A28A04F6F0073EBAC /* 1.Lamp.swift in Sources */,
 				5A72661B28A04EDD0073EBAC /* SUIChallengesApp.swift in Sources */,
 				5A0E183D28E043BF00BD4CE1 /* 5.FlexCards.swift in Sources */,
+				5ACAD44828F9D49B00DE6156 /* 8.SneakersShop.swift in Sources */,
 				5A62639D28E8D81C00D0B9DF /* 7.WavedTabView.swift in Sources */,
 				5A72662C28A04FA00073EBAC /* 2.Spotify.swift in Sources */,
 				5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */,
