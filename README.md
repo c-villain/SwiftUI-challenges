@@ -7,3 +7,4 @@
  5. [Flex cards](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/5.FlexCards.swift)
  6. [Hamburgers](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/6.Hamburgers.swift)
  7. [Waved tab bar](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/7.WavedTabView.swift)
+ 8. [Sneakers shop concept](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/8.SneakersShop.swift)
