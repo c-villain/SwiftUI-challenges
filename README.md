@@ -57,7 +57,7 @@
   <p align="left">
   <img src="demos/UpsideWavedTabBar.gif" alt="" height="427" width="280">
   </p>
- 
+
   <p align="left">
   <img src="demos/InsideWavedTabBar.gif" alt="" height="427" width="280">
   </p>
