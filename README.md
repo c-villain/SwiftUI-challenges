@@ -1,8 +1,8 @@
 # SwiftUI challenges
 
-Welcome 🤙🏻 
+## Welcome 🤙🏻✌🏻🖖🏻
 
-This project contains examples of animations developed with SwiftUI.
+This project contains helpful and useful examples of animations developed with SwiftUI.
 
 You may find some inspiration 💡 for your current or next project or you may take challenge to make it yourself 💪🏻
 
