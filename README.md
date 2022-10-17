@@ -49,7 +49,7 @@ Demo videos and gifs you may find in every event.
   <img src="demos/Fireworks.gif" alt="" height="300" width="300">
   </p>
   
-## 5. [Flex cards 🌆](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/5.FlexCards.swift)
+## 5. [Flex cards 🌆🌅🌄](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/5.FlexCards.swift)
  
   [Flex cards full video demo](https://t.me/swiftui_dev/191)
  
