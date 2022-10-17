@@ -51,6 +51,7 @@
  7. [Waved tab bar](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/7.WavedTabView.swift)
  
   [Waved tab bar full video demo](https://t.me/swiftui_dev/194)
+  
   [Separate demo project](https://github.com/c-villain/WavedTabView)
   
   <p align="left">
