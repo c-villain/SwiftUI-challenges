@@ -55,15 +55,15 @@
   [Separate demo project](https://github.com/c-villain/WavedTabView)
   
   <p align="left">
-  <img src="demos/UpsideWavedTabBar.gif" alt="" height="300" width="300">
+  <img src="demos/UpsideWavedTabBar.gif" alt="" height="427" width="280">
   </p>
  
   <p align="left">
-  <img src="demos/InsideWavedTabBar.gif" alt="" height="300" width="300">
+  <img src="demos/InsideWavedTabBar.gif" alt="" height="427" width="280">
   </p>
   
   <p align="left">
-  <img src="demos/NonWavedTabBar.gif" alt="" height="300" width="300">
+  <img src="demos/NonWavedTabBar.gif" alt="" height="427" width="280">
   </p>
   
  8. [Sneakers shop concept](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/8.SneakersShop.swift)
