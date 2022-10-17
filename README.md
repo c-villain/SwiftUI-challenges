@@ -5,7 +5,7 @@
   [Lamp challenge full video demo](https://t.me/swiftui_dev/184)
   
   <p align="left">
-  <img src="demos/Lamp.gif" alt="" height="300" width="300">
+  <img src="demos/lamp.gif" alt="" height="300" width="300">
   </p>
  
  2. [Spotify](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/2.Spotify.swift)
