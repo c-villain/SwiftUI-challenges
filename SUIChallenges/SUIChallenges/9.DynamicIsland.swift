@@ -41,7 +41,7 @@ struct DynamicIsland: View {
                                 showNewPost.toggle()
                             }
                         } label: {
-                            Text(showNewPost ? "Dismiss" : "New post")
+                            Text(showNewPost ? "Dismiss" : "@SwiftUI_Dev: new post")
                         }.opacity(showIncomingCall || showOngoingCall ? 0 : 1)
                         
                         Button {
@@ -52,9 +52,9 @@ struct DynamicIsland: View {
                             Text(showOngoingCall ? "Dismiss" : "Ongoing phone call")
                         }.opacity(showIncomingCall || showNewPost ? 0 : 1)
                         
-                        Text("@SwiftUI_dev")
-                            .fontWeight(.semibold)
-                            .opacity(showIncomingCall || showNewPost || showOngoingCall ? 0 : 1)
+                        Text("@LexKraev")
+                            .fontWeight(.regular)
+                            .opacity(showIncomingCall || showNewPost || showOngoingCall ? 0 : 0.5)
                     }
                     .position(x: reader.frame(in: .local).midX, y: reader.frame(in: .local).midY)
                 } else {
