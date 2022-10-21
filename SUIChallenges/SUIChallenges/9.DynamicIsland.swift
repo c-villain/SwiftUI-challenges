@@ -17,43 +17,52 @@ struct DynamicIsland: View {
     var body: some View {
         GeometryReader { reader in
             ZStack(alignment: .top) {
-                IncomingCallView(size: reader.size,
-                         isShown: $showIncomingCall)
-                
-                SwiftUIDevPost(size: reader.size,
-                               isShown: $showNewPost)
-                
-                OngoingCallView(size: reader.size,
-                                 isShown: $showOngoingCall)
-                
-                VStack(spacing: 24) {
-                    Button {
-                        withAnimation(.linear(duration: 0.3)) {
-                            showIncomingCall.toggle()
-                        }
-                    } label: {
-                        Text(showIncomingCall ? "Dismiss" : "Incoming call")
-                    }.opacity(showNewPost || showOngoingCall ? 0 : 1)
+                if UIApplication.shared.withDynamicIsland {
+                    IncomingCallView(size: reader.size,
+                                     isShown: $showIncomingCall)
                     
-                    Button {
-                        withAnimation(.linear(duration: 0.3)) {
-                            showNewPost.toggle()
-                        }
-                    } label: {
-                        Text(showNewPost ? "Dismiss" : "New post")
-                    }.opacity(showIncomingCall || showOngoingCall ? 0 : 1)
+                    SwiftUIDevPost(size: reader.size,
+                                   isShown: $showNewPost)
                     
-                    Button {
-                        withAnimation(.linear(duration: 0.3)) {
-                            showOngoingCall.toggle()
-                        }
-                    } label: {
-                        Text(showOngoingCall ? "Dismiss" : "Ongoing phone call")
-                    }.opacity(showIncomingCall || showNewPost ? 0 : 1)
+                    OngoingCallView(size: reader.size,
+                                    isShown: $showOngoingCall)
+                    
+                    VStack(spacing: 24) {
+                        Button {
+                            withAnimation(.linear(duration: 0.3)) {
+                                showIncomingCall.toggle()
+                            }
+                        } label: {
+                            Text(showIncomingCall ? "Dismiss" : "Incoming call")
+                        }.opacity(showNewPost || showOngoingCall ? 0 : 1)
+                        
+                        Button {
+                            withAnimation(.linear(duration: 0.3)) {
+                                showNewPost.toggle()
+                            }
+                        } label: {
+                            Text(showNewPost ? "Dismiss" : "New post")
+                        }.opacity(showIncomingCall || showOngoingCall ? 0 : 1)
+                        
+                        Button {
+                            withAnimation(.linear(duration: 0.3)) {
+                                showOngoingCall.toggle()
+                            }
+                        } label: {
+                            Text(showOngoingCall ? "Dismiss" : "Ongoing phone call")
+                        }.opacity(showIncomingCall || showNewPost ? 0 : 1)
+                        
+                        Text("@SwiftUI_dev")
+                            .fontWeight(.semibold)
+                            .opacity(showIncomingCall || showNewPost || showOngoingCall ? 0 : 1)
+                    }
+                    .position(x: reader.frame(in: .local).midX, y: reader.frame(in: .local).midY)
+                } else {
+                    Text("Please launch app on the iPhone 14 Pro or Pro Max")
+                        .padding()
+                        .position(x: reader.frame(in: .local).midX, y: reader.frame(in: .local).midY)
                 }
-                .position(x: reader.frame(in: .local).midX, y: reader.frame(in: .local).midY)
             }
-            
         }
         .ignoresSafeArea()
         .statusBarHidden(showIncomingCall || showNewPost || showOngoingCall)
@@ -129,6 +138,7 @@ struct IncomingCallView: View {
 struct SwiftUIDevPost: View {
     var size: CGSize
     @Binding var isShown: Bool
+    @State private var isSubscribed = false
     
     var body: some View {
         HStack {
@@ -145,7 +155,7 @@ struct SwiftUIDevPost: View {
                         .fontWeight(.medium)
                         .foregroundColor(.gray)
                     
-                    Text("New post")
+                    Text("New post: Dynamic island")
                         .font(.subheadline)
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
@@ -154,7 +164,24 @@ struct SwiftUIDevPost: View {
                 Spacer()
                 
                 Button {
+                    withAnimation {
+                        isSubscribed.toggle()
+                    }
+                } label: {
+                    Image(systemName: isSubscribed ? "bell.fill" : "bell")
+                      .resizable()
+                      .aspectRatio(contentMode: .fit)
+                      .frame(width: 14, height: 14)
+                      .foregroundColor(.white)
+                      .padding(14)
+                      .background(.red.opacity(0.8))
+                      .clipShape(Circle())
+                }
                 
+                Button {
+                    withAnimation(.linear(duration: 0.3)) {
+                        isShown.toggle()
+                    }
                 } label: {
                     Image(systemName: "hand.thumbsup.fill")
                       .resizable()
@@ -289,5 +316,11 @@ fileprivate struct Segment: Animatable, View {
                 .frame(width: 3)
                 .padding(.vertical, geometry.size.height * paddingTop)
         }
+    }
+}
+
+fileprivate extension UIApplication {
+    var withDynamicIsland: Bool {
+        return UIDevice.current.name == "iPhone 14 Pro" || UIDevice.current.name == "iPhone 14 Pro Max"
     }
 }
