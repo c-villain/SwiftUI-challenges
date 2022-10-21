@@ -86,3 +86,11 @@ Demo videos and gifs you may find in every event.
   <p align="left">
   <img src="demos/SneakersShop.gif" alt="" height="300" width="300">
   </p>
+  
+## 9. [Dynamic Island 🏝](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/9.DynamicIsland.swift)
+ 
+ [Sneakers shop concept full video demo](https://t.me/swiftui_dev/196)
+ 
+  <p align="left">
+  <img src="demos/DynamicIsland.gif" alt="" height="300" width="300">
+  </p>
