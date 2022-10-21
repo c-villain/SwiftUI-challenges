@@ -20,7 +20,8 @@ struct SUIChallengesApp: App {
 //            FlexCards()
 //            Hamburgers()
 //            WavedTabView()
-            SneakersShop()
+//            SneakersShop()
+            DynamicIsland()
         }
     }
 }
