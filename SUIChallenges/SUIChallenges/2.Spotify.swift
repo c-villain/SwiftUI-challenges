@@ -58,7 +58,7 @@ struct Spotify: View {
     }
 }
 
-struct Bar: View {
+fileprivate struct Bar: View {
     
     let color: Color
     let timer: Timer.TimerPublisher
@@ -79,7 +79,7 @@ struct Bar: View {
     }
 }
 
-struct Segment: Animatable, View {
+fileprivate struct Segment: Animatable, View {
 
     let color: Color
     var paddingTop: CGFloat = 1.0

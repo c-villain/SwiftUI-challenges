@@ -87,7 +87,9 @@ struct IncomingCallView: View {
                 Spacer()
                 
                 Button {
-                
+                    withAnimation(.linear(duration: 0.3)) {
+                        isShown.toggle()
+                    }
                 } label: {
                     Image(systemName: "phone.down.fill")
                       .resizable()
@@ -201,6 +203,13 @@ struct OngoingCallView: View {
                 }
                 Spacer()
                 
+                // Voice bar
+                HStack(spacing: 1.0) {
+                    ForEach(0...15, id: \.self) { _ in
+                        Bar(color: .white, interval: 0.1)
+                    }
+                }
+                .frame(width: 60, height: 20)
             }
             .opacity(isShown ? 1.0 : 0.0)
         }
@@ -239,5 +248,46 @@ struct OngoingCallView: View {
         hours = 0
         minutes = 0
         seconds = 0
+    }
+}
+
+fileprivate struct Bar: View {
+    
+    let color: Color
+    let timer: Timer.TimerPublisher
+    
+    @State private var paddingTop: CGFloat = 1.0
+    
+    init(color: Color, interval: TimeInterval) {
+        self.color = color
+        timer = Timer.publish(every: interval, on: .main, in: .common)
+    }
+    
+    var body: some View {
+        Segment(color: color, paddingTop: paddingTop)
+            .animation(.spring(), value: paddingTop)
+            .onReceive(timer.autoconnect()) { _ in
+                paddingTop = CGFloat.random(in: 0...0.4)
+            }
+    }
+}
+
+fileprivate struct Segment: Animatable, View {
+
+    let color: Color
+    var paddingTop: CGFloat = 1.0
+
+    public var animatableData: CGFloat {
+        get { paddingTop }
+        set { paddingTop = newValue }
+    }
+    
+    var body: some View {
+        GeometryReader { geometry in
+            RoundedRectangle(cornerRadius: 12.0)
+                .fill(color)
+                .frame(width: 3)
+                .padding(.vertical, geometry.size.height * paddingTop)
+        }
     }
 }
