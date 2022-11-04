@@ -21,7 +21,8 @@ struct SUIChallengesApp: App {
 //            Hamburgers()
 //            WavedTabView()
 //            SneakersShop()
-            DynamicIsland()
+//            DynamicIsland()
+            FastFoodLogo()
         }
     }
 }
