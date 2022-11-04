@@ -94,3 +94,5 @@ Demo videos and gifs you may find in every event.
   <p align="left">
   <img src="demos/DynamicIsland.gif" alt="" height="300" width="300">
   </p>
+  
+## 10. [Fast food cafe animation 🍟](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/10.FastFoodLogo.swift)
