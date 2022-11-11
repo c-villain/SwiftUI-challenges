@@ -96,3 +96,11 @@ Demo videos and gifs you may find in every event.
   </p>
   
 ## 10. [Fast food cafe animation 🍟](https://github.com/c-villain/SwiftUI-challenges/blob/main/SUIChallenges/SUIChallenges/10.FastFoodLogo.swift)
+
+  [Fast food cafe animation full video demo](https://t.me/swiftui_dev/198)
+
+  <p align="left">
+  <img src="demos/FastFoodCommercial.gif" alt="" height="300" width="300">
+  </p>
+
+
