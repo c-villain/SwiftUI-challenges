@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Constants {
+fileprivate enum Constants {
     enum Circle {
         enum Radius {
             static let scaled: CGFloat = 500
