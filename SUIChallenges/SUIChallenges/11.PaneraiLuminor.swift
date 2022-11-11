@@ -18,6 +18,7 @@ fileprivate enum Constants {
     enum colors {
         static let luminofor = Color(red: 170/255, green: 185/255, blue: 156/255)
         static let luminoforInBlack = Color(red: 52/255, green: 220/255, blue: 143/255)
+        static let hand = Color(red: 212/255, green: 212/255, blue: 212/255)
         static let bg = Color(red: 64/255, green: 64/255, blue: 64/255)
         static let dateBg = Color(red: 49/255, green: 49/255, blue: 49/255)
         static let text = Color(red: 221/255, green: 202/255, blue: 181/255)
@@ -50,11 +51,13 @@ struct PaneraiLuminor: View {
                     Hour()
                         .stroke(lineWidth: 8)
                         .fill(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
+                        .shadow(color: .black, radius: 2)
                         .rotationEffect(.radians(Double.pi * 2 / 12 * Double(hour)))
                 } else if hour == 3 {
                     Hour(length: 15)
                         .stroke(lineWidth: 8)
                         .fill(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
+                        .shadow(color: .black, radius: 2)
                         .rotationEffect(.radians(Double.pi * 2 / 12 * Double(hour)))
                 }
             }
@@ -65,6 +68,7 @@ struct PaneraiLuminor: View {
                     .kerning(0.5)
                     .foregroundColor(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                     .fontWeight(.bold)
+                    .shadow(color: .black, radius: 2)
                     .font(.system(size: 54, weight: .heavy, design: .rounded))
                     .offset(y: -Constants.sizes.dial/2 + 15)
                 
@@ -72,6 +76,7 @@ struct PaneraiLuminor: View {
                     .kerning(0.5)
                     .foregroundColor(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                     .fontWeight(.bold)
+                    .shadow(color: .black, radius: 2)
                     .font(.system(size: 54, weight: .heavy, design: .rounded))
                     .offset(y: Constants.sizes.dial/2 - 15)
                     
@@ -80,6 +85,7 @@ struct PaneraiLuminor: View {
                     .kerning(0.5)
                     .foregroundColor(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                     .fontWeight(.bold)
+                    .shadow(color: .black, radius: 2)
                     .font(.system(size: 54, weight: .heavy, design: .rounded))
                     .offset(x: -Constants.sizes.dial/2 + 15)
                 
@@ -92,6 +98,7 @@ struct PaneraiLuminor: View {
                         .fontWeight(.bold)
                         .font(.system(size: 18, weight: .heavy, design: .rounded))
                 }
+                .shadow(color: .black, radius: 2)
                 .frame(width: 30, height: 20)
                 .opacity(colorScheme == .dark ? 0.1 : 1.0)
                 .offset(x: Constants.sizes.dial/2 - 15 - 25)
@@ -103,7 +110,8 @@ struct PaneraiLuminor: View {
                     Hour(length: hour % 3 == 0 ? 8 : 4)
                         .stroke(lineWidth: hour % 3 == 0 ? 3 : 2)
                         .fill(hour % 3 == 0 ? (colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor) :
-                                Constants.colors.text .opacity(colorScheme == .dark ? 0.1 : 1.0))
+                                Constants.colors.text.opacity(colorScheme == .dark ? 0.1 : 1.0))
+                        .shadow(color: .black, radius: hour % 3 == 0 ? 1 : 0)
                         .rotationEffect(.radians(Double.pi * 2 / 12 * Double(hour)))
                 }
                 
@@ -111,7 +119,8 @@ struct PaneraiLuminor: View {
                 PaneraiHand(width: Constants.sizes.secondsDial,
                             height: 8,
                             color: colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor,
-                            strokeColor: colorScheme == .dark ? .black : .blue)
+                            strokeColor: colorScheme == .dark ? .black : Constants.colors.hand)
+                .shadow(color: .black, radius: 2)
                 .rotationEffect(Angle.degrees(360 * seconds / 60 - 90))
             }
             .frame(width: Constants.sizes.secondsDial, height: Constants.sizes.secondsDial)
@@ -123,7 +132,8 @@ struct PaneraiLuminor: View {
             PaneraiHand(width: 280,
                         height: 20,
                         color: colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor,
-                        strokeColor: .black)
+                        strokeColor: colorScheme == .dark ? .black : Constants.colors.hand)
+            .shadow(color: .black, radius: 5)
             .rotationEffect(Angle.degrees(360 * minutes / 60 - 90))
             .frame(width: 300, height: 300)
             .zIndex(3)
@@ -132,10 +142,11 @@ struct PaneraiLuminor: View {
             PaneraiHand(width: 200,
                         height: 20,
                         color: colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor,
-                        strokeColor: .black)
-                .rotationEffect(Angle.degrees(360 * hours / 12 - 90))
-                .frame(width: 300, height: 300)
-                .zIndex(4)
+                        strokeColor: colorScheme == .dark ? .black : Constants.colors.hand)
+            .shadow(color: .black, radius: 4)
+            .rotationEffect(Angle.degrees(360 * hours / 12 - 90))
+            .frame(width: 300, height: 300)
+            .zIndex(4)
             
             Text("PANERAI")
                 .kerning(0.5)
@@ -225,7 +236,6 @@ extension Date {
         return calendar.component(component, from: self)
     }
 }
-
 
 // MARK: - Shapes
 struct Arrow: Shape {
