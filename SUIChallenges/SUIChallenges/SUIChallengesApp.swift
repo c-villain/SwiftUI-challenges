@@ -23,7 +23,7 @@ struct SUIChallengesApp: App {
 //            SneakersShop()
 //            DynamicIsland()
 //            FastFoodLogo()
-            Time()
+            PaneraiLuminor()
         }
     }
 }

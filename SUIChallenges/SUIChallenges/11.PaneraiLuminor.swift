@@ -1,5 +1,5 @@
 //
-//  11.Time.swift
+//  11.PaneraiLuminor.swift
 //  SUIChallenges
 //
 //  Created by Alexander Kraev on 08.11.2022.
@@ -12,11 +12,12 @@ fileprivate enum Constants {
     enum sizes {
         static let bezelSize: CGFloat = 350
         static let dial: CGFloat = 300
-        static let secondsDial: CGFloat = 70
+        static let secondsDial: CGFloat = 60
     }
     
     enum colors {
         static let luminofor = Color(red: 170/255, green: 185/255, blue: 156/255)
+        static let luminoforInBlack = Color(red: 52/255, green: 220/255, blue: 143/255)
         static let bg = Color(red: 64/255, green: 64/255, blue: 64/255)
         static let dateBg = Color(red: 49/255, green: 49/255, blue: 49/255)
         static let text = Color(red: 221/255, green: 202/255, blue: 181/255)
@@ -24,7 +25,10 @@ fileprivate enum Constants {
 }
 
 // MARK: - Panerai view
-struct Time: View {
+struct PaneraiLuminor: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var seconds : Double = Date().second
     @State var minutes : Double = Date().minute
     @State var hours : Double = Date().hour
@@ -38,19 +42,19 @@ struct Time: View {
                 .strokeBorder(Color.gray,lineWidth: 10)
                 .background(Circle().foregroundColor(Constants.colors.bg))
                 .frame(width: Constants.sizes.bezelSize, height: Constants.sizes.bezelSize)
-                .opacity(0.8)
+                .opacity(colorScheme == .dark ? 0.1 : 0.8)
                 .zIndex(0)
             
             ForEach(0..<12) { hour in
                 if (hour % 3 != 0) {
                     Hour()
                         .stroke(lineWidth: 8)
-                        .fill(Constants.colors.luminofor)
+                        .fill(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                         .rotationEffect(.radians(Double.pi * 2 / 12 * Double(hour)))
-                } else if hour == 9 {
-                    Hour(length: 17)
+                } else if hour == 3 {
+                    Hour(length: 15)
                         .stroke(lineWidth: 8)
-                        .fill(Constants.colors.luminofor)
+                        .fill(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                         .rotationEffect(.radians(Double.pi * 2 / 12 * Double(hour)))
                 }
             }
@@ -59,18 +63,26 @@ struct Time: View {
             Group {
                 Text("12")
                     .kerning(0.5)
-                    .foregroundColor(Constants.colors.luminofor)
+                    .foregroundColor(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                     .fontWeight(.bold)
                     .font(.system(size: 54, weight: .heavy, design: .rounded))
                     .offset(y: -Constants.sizes.dial/2 + 15)
                 
                 Text("6")
                     .kerning(0.5)
-                    .foregroundColor(Constants.colors.luminofor)
+                    .foregroundColor(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
                     .fontWeight(.bold)
                     .font(.system(size: 54, weight: .heavy, design: .rounded))
                     .offset(y: Constants.sizes.dial/2 - 15)
                     
+            
+                Text("9")
+                    .kerning(0.5)
+                    .foregroundColor(colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor)
+                    .fontWeight(.bold)
+                    .font(.system(size: 54, weight: .heavy, design: .rounded))
+                    .offset(x: -Constants.sizes.dial/2 + 15)
+                
                 ZStack {
                     Constants.colors.dateBg
                     
@@ -81,7 +93,8 @@ struct Time: View {
                         .font(.system(size: 18, weight: .heavy, design: .rounded))
                 }
                 .frame(width: 30, height: 20)
-                .offset(x: Constants.sizes.dial/2 - 15)
+                .opacity(colorScheme == .dark ? 0.1 : 1.0)
+                .offset(x: Constants.sizes.dial/2 - 15 - 25)
             }
             .zIndex(1)
             
@@ -89,30 +102,37 @@ struct Time: View {
                 ForEach(0..<12) { hour in
                     Hour(length: hour % 3 == 0 ? 8 : 4)
                         .stroke(lineWidth: hour % 3 == 0 ? 3 : 2)
-                        .fill(hour % 3 == 0 ? Constants.colors.luminofor : Constants.colors.text)
+                        .fill(hour % 3 == 0 ? (colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor) :
+                                Constants.colors.text .opacity(colorScheme == .dark ? 0.1 : 1.0))
                         .rotationEffect(.radians(Double.pi * 2 / 12 * Double(hour)))
                 }
                 
-                Circle()
-                    .mask(ClockHand()
-                        .frame(width: Constants.sizes.secondsDial, height: 10))
-                    .rotationEffect(Angle.degrees(360 * seconds / 60 - 90))
-                    .foregroundColor(.blue)
+                //seconds hand
+                PaneraiHand(width: Constants.sizes.secondsDial,
+                            height: 8,
+                            color: colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor,
+                            strokeColor: colorScheme == .dark ? .black : .blue)
+                .rotationEffect(Angle.degrees(360 * seconds / 60 - 90))
             }
             .frame(width: Constants.sizes.secondsDial, height: Constants.sizes.secondsDial)
-            .offset(x: -(Constants.sizes.bezelSize - 10) / 4)
+            .offset(x: -(Constants.sizes.bezelSize - 10) / 4 + 10)
             .zIndex(2)
             
-            Circle()
-                .mask(ClockHand()
-                    .frame(width: 280, height: 20))
-                .rotationEffect(Angle.degrees(360 * minutes / 60 - 90))
-                .frame(width: 300, height: 300)
-                .zIndex(3)
             
-            Circle()
-                .mask(ClockHand()
-                    .frame(width: 200, height: 20))
+            // minutes hand
+            PaneraiHand(width: 280,
+                        height: 20,
+                        color: colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor,
+                        strokeColor: .black)
+            .rotationEffect(Angle.degrees(360 * minutes / 60 - 90))
+            .frame(width: 300, height: 300)
+            .zIndex(3)
+            
+            // hours hand
+            PaneraiHand(width: 200,
+                        height: 20,
+                        color: colorScheme == .dark ? Constants.colors.luminoforInBlack : Constants.colors.luminofor,
+                        strokeColor: .black)
                 .rotationEffect(Angle.degrees(360 * hours / 12 - 90))
                 .frame(width: 300, height: 300)
                 .zIndex(4)
@@ -123,6 +143,7 @@ struct Time: View {
                 .fontWeight(.bold)
                 .font(.title3)
                 .offset(y: (Constants.sizes.dial - 10) / 4)
+                .opacity(colorScheme == .dark ? 0.1 : 1.0)
                 .zIndex(1)
             
             VStack(spacing: 0) {
@@ -132,17 +153,18 @@ struct Time: View {
                     .fontWeight(.bold)
                     .font(.title3)
                 Text("MARINA")
-                    .kerning(0.5)
+                    .kerning(2.8)
                     .foregroundColor(Constants.colors.text)
                     .fontWeight(.bold)
                     .font(.title3)
             }
             .fixedSize()
             .offset(y: -(Constants.sizes.dial - 10) / 4)
+            .opacity(colorScheme == .dark ? 0.1 : 1.0)
             .zIndex(1)
             
-          }.onReceive(timer) { time in
-
+          }
+        .onReceive(timer) { time in
               self.seconds = Date().second
               self.minutes = Date().minute
               self.hours = Date().hour
@@ -155,6 +177,29 @@ struct Time: View {
                   self.seconds = round(self.seconds + 1)
               }
           }
+    }
+}
+
+struct PaneraiHand: View {
+    
+    let width: CGFloat
+    let height: CGFloat
+    let color: Color
+    let strokeColor: Color
+    
+    var body: some View {
+        ZStack {
+            Circle()
+                .mask(ClockHand()
+                    .frame(width: width, height: height))
+                .foregroundColor(color)
+                .zIndex(0)
+            Circle()
+                .mask(StrokeClockHand()
+                    .frame(width: width, height: height))
+                .foregroundColor(strokeColor)
+                .zIndex(1)
+        }
     }
 }
 
@@ -181,6 +226,7 @@ extension Date {
     }
 }
 
+
 // MARK: - Shapes
 struct Arrow: Shape {
     func path(in rect: CGRect) -> Path {
@@ -196,8 +242,23 @@ struct Arrow: Shape {
 }
 
 struct ClockHand: Shape {
-    
     func path(in rect: CGRect) -> Path {
+        Hand()
+            .path(in: rect)
+    }
+}
+
+struct StrokeClockHand: Shape {
+    func path(in rect: CGRect) -> Path {
+        Hand()
+            .path(in: rect)
+            .strokedPath(StrokeStyle(lineWidth: CGFloat(rect.height * 0.2), lineCap: .round))
+    }
+}
+
+struct Hand: Shape {
+    func path(in rect: CGRect) -> Path {
+        
         Path { p in
             p.move(to: CGPoint(x: rect.midX + rect.maxY * 0.3, y: rect.maxY * 0.3))
             p.addLine(to: CGPoint(x: rect.maxX - rect.maxX * 0.04, y: rect.maxY * 0.3))
@@ -209,7 +270,7 @@ struct ClockHand: Shape {
             p.addLine(to: .init(x: rect.midX + rect.maxY * 0.3, y: rect.maxY * 0.7))
             
             p.addEllipse(in: CGRect(x: rect.midX - rect.maxY * 0.3 , y: rect.midY - rect.maxY * 0.3, width: rect.maxY * 0.6, height: rect.maxY * 0.6))
-        }.strokedPath(StrokeStyle(lineWidth: CGFloat(rect.height * 0.2), lineCap: .round))
+        }
     }
 }
 
@@ -223,7 +284,6 @@ struct Hour: Shape {
             p.addLine(to: CGPoint(x: rect.midX, y: rect.minY + length))
         }
         .strokedPath(.init(lineCap: .round))
-        
     }
 }
 
@@ -249,8 +309,8 @@ struct Hour_Previews: PreviewProvider {
     }
 }
 
-struct Time_Previews: PreviewProvider {
+struct PaneraiLuminor_Previews: PreviewProvider {
     static var previews: some View {
-        Time()
+        PaneraiLuminor()
     }
 }

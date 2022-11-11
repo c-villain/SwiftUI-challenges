@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A0E183D28E043BF00BD4CE1 /* 5.FlexCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */; };
-		5A1A8A69291AF29200D859A7 /* 11.Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A8A68291AF29200D859A7 /* 11.Time.swift */; };
+		5A1A8A69291AF29200D859A7 /* 11.PaneraiLuminor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A8A68291AF29200D859A7 /* 11.PaneraiLuminor.swift */; };
 		5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */; };
 		5A576EB228E3788600F15B57 /* 6.Hamburgers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A576EB128E3788600F15B57 /* 6.Hamburgers.swift */; };
 		5A62639D28E8D81C00D0B9DF /* 7.WavedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A62639C28E8D81C00D0B9DF /* 7.WavedTabView.swift */; };
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5A0E183C28E043BF00BD4CE1 /* 5.FlexCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.FlexCards.swift; sourceTree = "<group>"; };
-		5A1A8A68291AF29200D859A7 /* 11.Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.Time.swift; sourceTree = "<group>"; };
+		5A1A8A68291AF29200D859A7 /* 11.PaneraiLuminor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.PaneraiLuminor.swift; sourceTree = "<group>"; };
 		5A3CFBCA28B55EE700E1D5D7 /* 4.Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.Firework.swift; sourceTree = "<group>"; };
 		5A576EB128E3788600F15B57 /* 6.Hamburgers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.Hamburgers.swift; sourceTree = "<group>"; };
 		5A62639C28E8D81C00D0B9DF /* 7.WavedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.WavedTabView.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				5ACAD44728F9D49B00DE6156 /* 8.SneakersShop.swift */,
 				5A7475352900BB2A0037DD08 /* 9.DynamicIsland.swift */,
 				5ABB122B290D90AB007AC0F8 /* 10.FastFoodLogo.swift */,
-				5A1A8A68291AF29200D859A7 /* 11.Time.swift */,
+				5A1A8A68291AF29200D859A7 /* 11.PaneraiLuminor.swift */,
 			);
 			path = SUIChallenges;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 				5A7475362900BB2A0037DD08 /* 9.DynamicIsland.swift in Sources */,
 				5A72662C28A04FA00073EBAC /* 2.Spotify.swift in Sources */,
 				5A3CFBCB28B55EE700E1D5D7 /* 4.Firework.swift in Sources */,
-				5A1A8A69291AF29200D859A7 /* 11.Time.swift in Sources */,
+				5A1A8A69291AF29200D859A7 /* 11.PaneraiLuminor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
