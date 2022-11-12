@@ -103,4 +103,10 @@ Demo videos and gifs you may find in every event.
   <img src="demos/FastFoodCommercial.gif" alt="" height="300" width="300">
   </p>
 
+## 10. [Panerai watches ⌚️](https://boosty.to/lexkraev/posts/becd1a9a-7402-45e3-821c-8fb0ae51d42f)
 
+  [Panerai watches full video demo](https://t.me/swiftui_dev/200)
+
+  <p align="left">
+  <img src="demos/panerai.gif" alt="" height="300" width="300">
+  </p>
