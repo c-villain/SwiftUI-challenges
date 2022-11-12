@@ -22,8 +22,7 @@ struct SUIChallengesApp: App {
 //            WavedTabView()
 //            SneakersShop()
 //            DynamicIsland()
-//            FastFoodLogo()
-            PaneraiLuminor()
+            FastFoodLogo()
         }
     }
 }
