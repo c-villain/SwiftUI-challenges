@@ -110,3 +110,11 @@ Demo videos and gifs you may find in every event.
   <p align="left">
   <img src="demos/panerai.gif" alt="" height="300" width="300">
   </p>
+
+## 10. [Loader 📶](https://boosty.to/lexkraev/posts/7ed82e08-0c72-4e77-99e1-61b05ef3449b)
+
+  [Loader full video demo](https://t.me/swiftui_dev/211)
+
+  <p align="left">
+  <img src="demos/Loader.gif" alt="" height="300" width="300">
+  </p>
