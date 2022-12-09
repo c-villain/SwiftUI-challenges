@@ -118,3 +118,11 @@ Demo videos and gifs you may find in every event.
   <p align="left">
   <img src="demos/Loader.gif" alt="" height="300" width="300">
   </p>
+  
+## 11. [Vertical watches 📶⌚️](https://boosty.to/lexkraev/posts/a2b9780a-d039-4feb-960f-0d94ff4096d8)
+
+  [Full video demo](https://t.me/swiftui_dev/212)
+
+  <p align="left">
+  <img src="demos/VerticalWatches.gif" alt="" height="300" width="300">
+  </p>
