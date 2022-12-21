@@ -132,5 +132,5 @@ Demo videos and gifs you may find in every event.
   [Full video demo](https://t.me/swiftui_dev/217)
 
   <p align="left">
-  <img src="demos/VerticalWatches.gif" alt="" height="300" width="300">
+  <img src="demos/kavsoft.gif" alt="" height="300" width="300">
   </p>
