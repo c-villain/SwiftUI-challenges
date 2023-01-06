@@ -140,7 +140,7 @@ Demo videos and gifs you may find in every event.
 
  ## 13. [Button reactions 🤸🏻‍♂️](https://github.com/c-villain/Animatable)
  
-  [Waved tab bar full video demo](https://t.me/swiftui_dev/222)
+  [Full video demo](https://t.me/swiftui_dev/222)
   
   [Separate demo project](https://github.com/c-villain/Animatable)
   
