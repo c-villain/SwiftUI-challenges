@@ -147,3 +147,19 @@ Demo videos and gifs you may find in every event.
   <p align="left">
   <img src="demos/animatable.gif" alt="" width="300">
   </p>
+  
+ ## 14. [App ads from AppStore 🥷](https://boosty.to/lexkraev/posts/81270528-df44-4283-a6ed-99380b02bfef)
+ 
+  [Full video demo](https://t.me/swiftui_dev/229)
+
+  <p align="left">
+  <img src="demos/AppAds.gif" alt="" width="300">
+  </p>
+  
+  ## 15. [Image slider with page view controller effect 🧞‍♂️](https://boosty.to/lexkraev/posts/4a15893d-7e68-48d6-9a73-e170f3036c22)
+ 
+  [Full video demo](https://t.me/swiftui_dev/245)
+
+  <p align="left">
+  <img src="demos/imageSlider.gif" alt="" width="300">
+  </p>
